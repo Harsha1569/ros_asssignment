@@ -64,7 +64,7 @@ def move_turtle():
         distance = vel.linear.x*(time.time()-t)
         rospy.loginfo("The distance travelled by turtlebot: %.4f",distance)
         rospy.loginfo("The time taken by turtlebot: %.4f",time.time()-t)
-        if(2*math.pi*radius<time.time()-t):
+        if((2*math.pi*radius)/vel.linear.x<time.time()-t):
         	break
 
 if __name__ == '__main__':
